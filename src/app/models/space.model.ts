@@ -1,10 +1,10 @@
 export interface Space{
   id: string,
   name: string,
-  type: 'Gabinete' | 'Salon'
+  type: string
 }
 
 export interface newSpace{
   name: string,
-  type: 'Gabinete' | 'Salon'
+  type: string
 }
