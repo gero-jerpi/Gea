@@ -1,24 +1,22 @@
 {
-  "space": [
+  "spaces": [
     {
-      "id": "2d4b",
-      "name": "asdasd",
-      "type": "Gabinete"
-    },
-    {
-      "id": "6e82",
-      "name": "nombreasdasd",
+      "id": "9773",
+      "name": "Salon de yoga",
       "type": "Salon"
     },
     {
-      "id": "67e8",
-      "name": "nombreasdasd",
-      "type": "Gabinete"
+      "id": "453a",
+      "name": "Primer gabinete",
+      "type": "Salon"
     },
     {
-      "id": "2f5c",
-      "name": "asdasd",
+      "id": "8f2c",
+      "name": "Segundo gabinete",
       "type": "Gabinete"
     }
+  ],
+  "specialists": [
+
   ]
 }
