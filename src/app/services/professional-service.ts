@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class ProfessionalService {
   // API URL
-  private apiUrl = 'http://localhost:3000/professional';
+  private apiUrl = 'http://localhost:3000/professionals';
 
   // VARIABLES
   private professionalsSignal = signal<Professional[]>([]);

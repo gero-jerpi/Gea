@@ -17,6 +17,13 @@
     }
   ],
   "professionals": [
-
+    {
+      "id": "87c9",
+      "name": "Geronimo",
+      "surname": "Jerpi",
+      "dni": 44859245,
+      "phone": 2235759592,
+      "rol": "Masajista"
+    }
   ]
 }

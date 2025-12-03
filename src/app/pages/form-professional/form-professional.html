@@ -1,1 +1,24 @@
 <p>form-professional works!</p>
+
+<form [formGroup]="form" (ngSubmit)="render()">
+  <label>Nombre</label>
+  <input type="text" formControlName="name">
+  <label>Surname</label>
+  <input type="text" formControlName="surname">
+  <label>Dni</label>
+  <input type="number" formControlName="dni">
+  <label>Phone</label>
+  <input type="number" formControlName="phone">
+
+  <label>Rol</label>
+  <select formControlName="rol">
+    <option value="" disabled selected>Seleccionar...</option>
+    <option value="Masajista">Masajista</option>
+    <option value="Profesor de yoga">Profesor de yoga</option>
+  </select>
+
+  <button type="submit">
+    {{isEditMode() ? 'Editar' : 'Agregar'}}
+  </button>
+
+</form>

@@ -2,16 +2,16 @@ export interface Professional{
   id: string,
   name: string,
   surname: string;
-  dni: string,
+  dni: number,
   phone: number,
-  rol: 'Masajista' | 'Profesor de yoga' /// More can be added in the future
+  rol: string
 }
 
 export interface newProfessional{
   name: string,
   surname: string;
-  dni: string,
+  dni: number,
   phone: number,
-  rol: 'Masajista' | 'Profesor de yoga'
+  rol: string
 }
 
