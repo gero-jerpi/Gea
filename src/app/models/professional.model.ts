@@ -1,4 +1,4 @@
-export interface Specialist{
+export interface Professional{
   id: string,
   name: string,
   surname: string;
@@ -7,7 +7,7 @@ export interface Specialist{
   rol: 'Masajista' | 'Profesor de yoga' /// More can be added in the future
 }
 
-export interface newSpecialist{
+export interface newProfessional{
   name: string,
   surname: string;
   dni: string,

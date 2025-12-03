@@ -1,0 +1,16 @@
+<p>list-professional works!</p>
+
+<ul>
+  @for (item of professionals(); track $index) {
+    <li>
+      {{item.id}}
+      {{item.dni}}
+      {{item.name}}
+      {{item.surname}}
+      {{item.phone}}
+      {{item.rol}}
+      <button type="button" (click)="delete(item.id)">eliminar</button>
+      <button type="button" (click)="put(item)">actualizar</button>
+    </li>
+  }
+</ul>

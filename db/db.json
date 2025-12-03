@@ -1,22 +1,22 @@
 {
   "spaces": [
     {
-      "id": "9773",
+      "id": "salon",
       "name": "Salon de yoga",
       "type": "Salon"
     },
     {
-      "id": "453a",
+      "id": "gab1",
       "name": "Primer gabinete",
-      "type": "Salon"
+      "type": "Gabinete"
     },
     {
-      "id": "8f2c",
+      "id": "gab2",
       "name": "Segundo gabinete",
       "type": "Gabinete"
     }
   ],
-  "specialists": [
+  "professionals": [
 
   ]
 }
