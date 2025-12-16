@@ -1,16 +1,16 @@
 export interface Appointment {
   id: string;
-  idSpace: string;
-  idSpecialist: string;
-  idCustomer: string;
+  space: string;
+  surnameSpecialist: string;
+  surnameCustomer: string;
   date: string;
   time: string;
 }
 
 export interface newAppointment {
-  idSpace: string;
-  idSpecialist: string;
-  idCustomer: string;
+  space: string;
+  surnameSpecialist: string;
+  surnameCustomer: string;
   date: string;
   time: string;
 }

@@ -1,4 +1,19 @@
 {
+  "appointment": [],
+  "customers": [
+    {
+      "id": "8bef",
+      "name": "asd",
+      "surname": "asd",
+      "phone": 23,
+      "newCustomer": {
+        "name": "asd",
+        "surname": "asd",
+        "dni": 0,
+        "phone": 23
+      }
+    }
+  ],
   "spaces": [
     {
       "id": "salon",
@@ -21,7 +36,6 @@
       "id": "87c9",
       "name": "Geronimo",
       "surname": "Jerpi",
-      "dni": 44859245,
       "phone": 2235759592,
       "rol": "Masajista"
     }

@@ -1,0 +1,36 @@
+<div class="table-wrapper">
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Phone</th>
+        <th>Rol</th>
+        <th><p class="actions">Actions</p></th>
+      </tr>
+    </thead>
+
+    @for (item of professionals(); track $index){
+    <tbody>
+      <tr>
+        <td data-label="Nombre">
+          {{item.name}}
+        </td>
+        <td data-label="Apellido">
+          {{item.surname}}
+        </td>
+        <td data-label="Phone">
+          {{item.phone}}
+        </td>
+        <td data-label="Rol">
+          {{item.rol}}
+        </td>
+        <td data-label="Actions">
+          <button class="btn btn-edit" (click)="put(item)">Modificar</button>
+          <button class="btn btn-delete" (click)="delete(item.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+    }
+  </table>
+</div>

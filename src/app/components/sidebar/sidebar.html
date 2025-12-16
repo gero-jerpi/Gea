@@ -1,0 +1,42 @@
+<button (click)="open()">☰</button>
+
+@if(showAside){
+
+<div class="overlay" (click)="close()"></div>
+
+<aside class="sidebar">
+  <h2><a routerLink="/dashboard" class="titulo">Gestion</a></h2>
+  <nav>
+    <ul>
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <div class="dropdown">
+        <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Turnos </a>
+
+        <ul class="dropdown-menu">
+          <li><a routerLink="/form-appointment" class="dropdown-item" href="#">Agregar</a></li>
+          <li><a routerLink="/list-appointments" class="dropdown-item" href="#">Administrar</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Empleados </a>
+
+        <ul class="dropdown-menu">
+         <li><a routerLink="/form-professional" class="dropdown-item" href="#">Agregar</a></li>
+          <li><a routerLink="/list-professionals" class="dropdown-item" href="#">Administrar</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Clientes
+        </a>
+
+        <ul class="dropdown-menu">
+          <li><a routerLink="/form-customer" class="dropdown-item" href="#">Agregar</a></li>
+          <li><a routerLink="/list-customers" class="dropdown-item" href="#">Administrar</a></li>
+        </ul>
+      </div>
+    </ul>
+  </nav>
+</aside>
+}

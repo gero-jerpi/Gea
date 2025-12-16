@@ -60,7 +60,7 @@ export class ProfessionalService {
     return this.http.put<Professional>(`${this.apiUrl}/${professionalToUpdate.id}`, professionalToUpdate).pipe(
       tap(updatedProfessional=>{
         this.professionalsSignal.update(professionals =>
-          professionals.map(p => p.id === updatedProfessional.id ? updatedProfessional : p)
+          professionals.map(professional => professional.id === updatedProfessional.id ? updatedProfessional : professional)
         )
       })
     )

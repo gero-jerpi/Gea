@@ -35,7 +35,6 @@ export class FormProfessional {
         this.form.patchValue({
           name: this.professionalToEdit.name,
           surname: this.professionalToEdit.surname,
-          dni: this.professionalToEdit.dni,
           phone: this.professionalToEdit.phone,
           rol: this.professionalToEdit.rol,
         });
@@ -58,6 +57,7 @@ export class FormProfessional {
       const updateProfessional = { ...this.professionalToEdit, ...newProfessional };
       this.service.put(updateProfessional).subscribe(() => {
         console.log('Profesional actualizado');
+        this.service.clearProfessionalToEdit();
         this.form.reset();
       });
     } else {

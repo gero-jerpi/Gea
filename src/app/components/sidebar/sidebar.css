@@ -1,0 +1,54 @@
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60%;
+  background-color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav ul{
+  padding: 0;
+}
+
+.titulo{
+  font-size: 1.5rem;
+}
+
+button{
+  padding: 1rem;
+  background:none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.overlay{
+  background: rgba(0,0,0,.4);
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+}
+
+
+@media (min-width:768px){
+  button{
+    display: none;
+  }
+  .overlay{
+    display: none;
+  }
+  .sidebar{
+    width: 18%;
+    border-right: 1px solid rgb(223, 220, 220);
+  }
+}
+
+
+.open .aside{
+  display: none;
+}

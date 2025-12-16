@@ -1,0 +1,15 @@
+<p>list-appointment works!</p>
+
+<ul>
+  @for (item of appointments(); track $index) {
+    <li>
+      {{item.space}}
+      {{item.surnameCustomer}}
+      {{item.surnameSpecialist}}
+      {{item.date}}
+      {{item.time}}
+      <button type="button">Eliminar</button>
+      <button type="button">Actualizar</button>
+    </li>
+  }
+</ul>

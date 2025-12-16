@@ -1,0 +1,14 @@
+:root{
+ /* Light mode*/
+  --primary-color: white;
+  --secondary-color: black;
+  --text-color: black;
+}
+
+.dark-theme{
+  /* Dark Mode */
+  --primary-color: black;
+  --secondary-color: white;
+  --text-color: white;
+}
+
