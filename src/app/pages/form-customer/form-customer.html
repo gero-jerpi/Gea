@@ -1,12 +1,8 @@
-<p>form-customer works!</p>
-
 <form [formGroup]="form" (ngSubmit)="render()">
   <label>Nombre</label>
   <input type="text" formControlName="name">
   <label>Apellido</label>
   <input type="text" formControlName="surname">
-  <label>Dni</label>
-  <input type="number" formControlName="dni">
   <label>Phone</label>
   <input type="number" formControlName="phone">
   <button type="submit">

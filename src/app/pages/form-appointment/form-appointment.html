@@ -1,1 +1,21 @@
-<p>form-appointment works!</p>
+<form [formGroup]="form" (ngSubmit)="render()">
+
+  <label>Espacio</label>
+  <input type="text" formControlName="space">
+
+  <label>Apellido del profesional</label>
+  <input type="text" formControlName="surnameSpecialist">
+
+  <label>Apellido del cliente</label>
+  <input type="text" formControlName="surnameCustomer">
+
+  <label>Fecha</label>
+  <input type="date" formControlName="date">
+
+  <label>Hora</label>
+  <input type="time" formControlName="time">
+
+  <button type="submit">
+    {{isEditMode() ? 'Actualizar' : 'Agregar'}}
+  </button>
+</form>

@@ -1,15 +1,36 @@
-<p>list-appointment works!</p>
+<div class="table-wrapper">
+  <table class="responsive-table">
+    <thead>
+      <tr>
+        <th>Espacio</th>
+        <th>Apellido del profesional</th>
+        <th>Apellido del cliente</th>
+        <th>Fecha y hora</th>
+        <th><p class="actions">Actions</p></th>
+      </tr>
+    </thead>
 
-<ul>
-  @for (item of appointments(); track $index) {
-    <li>
-      {{item.space}}
-      {{item.surnameCustomer}}
-      {{item.surnameSpecialist}}
-      {{item.date}}
-      {{item.time}}
-      <button type="button">Eliminar</button>
-      <button type="button">Actualizar</button>
-    </li>
-  }
-</ul>
+    @for (item of appointments(); track $index){
+    <tbody>
+      <tr>
+        <td data-label="Espacio">
+          {{item.space}}
+        </td>
+        <td data-label="Apellido del profesional">
+          {{item.surnameSpecialist}}
+        </td>
+        <td data-label="Apellido del cliente">
+          {{item.surnameCustomer}}
+        </td>
+        <td data-label="Fecha y hora">
+          {{item.date}} / {{item.time}}
+        </td>
+        <td data-label="Actions">
+          <button class="btn btn-edit" (click)="update(item)">Modificar</button>
+          <button class="btn btn-delete" (click)="delete(item.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+    }
+  </table>
+</div>

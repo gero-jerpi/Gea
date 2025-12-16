@@ -49,7 +49,7 @@ export class FormCustomer {
     const newCustomer = this.form.getRawValue();
 
     if(this.customerToEdit && this.isEditMode()){
-      const updateCustomer = {...this.customerToEdit, newCustomer};
+      const updateCustomer = {...this.customerToEdit, ...newCustomer};
       this.service.put(updateCustomer).subscribe(()=>{
         console.log("Actualizado");
         this.service.clearCustomerToEdit()

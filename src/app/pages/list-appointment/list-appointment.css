@@ -1,0 +1,89 @@
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: system-ui, sans-serif;
+}
+
+.responsive-table thead {
+  background-color: #f9fafb;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.responsive-table th {
+  font-weight: 600;
+  color: #374151;
+}
+
+.responsive-table td {
+  color: #4b5563;
+}
+
+.responsive-table td button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.responsive-table td .btn-edit {
+  color: black;
+}
+
+.responsive-table td .btn-edit:hover {
+  background-color: #45a049;
+}
+
+.responsive-table td .btn-delete {
+  color: black;
+}
+
+.responsive-table td .btn-delete:hover {
+  background-color: #e53935;
+}
+
+.actions{
+  margin: 0 0 0 1.5rem;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .responsive-table thead {
+    display: none;
+  }
+
+  .responsive-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e5e7eb;
+  }
+
+  .responsive-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #374151;
+  }
+}
+

@@ -12,7 +12,6 @@ export class AppointmentService {
   private appointmentsSignal = signal<Appointment[]>([]);
   public appointments = this.appointmentsSignal.asReadonly();
 
-
   private appointmentToUpdateSignal = signal<Appointment | null>(null);
   public appointmentToUpdate = this.appointmentToUpdateSignal.asReadonly()
 

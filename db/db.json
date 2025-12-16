@@ -1,5 +1,21 @@
 {
-  "appointment": [],
+  "appointment": [
+    {
+      "id": "a4c6",
+      "space": "asd",
+      "surnameSpecialist": "asd",
+      "surnameCustomer": "asd",
+      "date": "2025-12-02",
+      "time": "02:26",
+      "newAppointment": {
+        "space": "asdasdasd",
+        "surnameSpecialist": "asdasd",
+        "surnameCustomer": "asdasdasd",
+        "date": "2025-12-18",
+        "time": "02:26"
+      }
+    }
+  ],
   "customers": [
     {
       "id": "8bef",
@@ -12,6 +28,13 @@
         "dni": 0,
         "phone": 23
       }
+    },
+    {
+      "id": "e6e1",
+      "name": "sss",
+      "surname": "sss",
+      "dni": 123,
+      "phone": 12333
     }
   ],
   "spaces": [
@@ -37,6 +60,14 @@
       "name": "Geronimo",
       "surname": "Jerpi",
       "phone": 2235759592,
+      "rol": "Masajista"
+    },
+    {
+      "id": "a4b1",
+      "name": "Auto",
+      "surname": "Luca",
+      "dni": 0,
+      "phone": 4485921349012,
       "rol": "Masajista"
     }
   ]
