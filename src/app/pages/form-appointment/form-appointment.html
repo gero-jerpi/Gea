@@ -1,21 +1,49 @@
-<form [formGroup]="form" (ngSubmit)="render()">
+<div class="container-fluid">
+  <div class="row">
+    <!-- Contenido principal -->
+    <div class="col ms-md-4 p-2">
+      <div class="card shadow-sm" style="max-width: 500px; margin: auto">
+        <div class="card-body">
+          <h5 class="card-title mb-3">
+            {{ isEditMode() ? 'Editar turno' : 'Nuevo turno' }}
+          </h5>
 
-  <label>Espacio</label>
-  <input type="text" formControlName="space">
+          <form [formGroup]="form" (ngSubmit)="render()">
+            <label class="form-label">Campo</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Seleccionar....</option>
+              <option value="Gabinete uno">Gabinete</option>
+              <option value="Profesor de yoga">Salon</option>
+            </select>
 
-  <label>Apellido del profesional</label>
-  <input type="text" formControlName="surnameSpecialist">
+            <div class="mb-3 mt-3">
+              <label class="form-label">Especialista</label>
+              <input type="text" class="form-control" formControlName="surnameSpecialist" placeholder="De Larrocha"/>
+            </div>
 
-  <label>Apellido del cliente</label>
-  <input type="text" formControlName="surnameCustomer">
+            <div class="mb-3">
+              <label class="form-label">Cliente</label>
+              <input type="text" class="form-control" formControlName="surnameCustomer" placeholder="Jerpi"/>
+            </div>
 
-  <label>Fecha</label>
-  <input type="date" formControlName="date">
+            <div class="mb-3">
+              <label class="form-label">Fecha</label>
+              <input type="date" class="form-control" formControlName="date" />
+            </div>
 
-  <label>Hora</label>
-  <input type="time" formControlName="time">
+            <div class="mb-3">
+              <label class="form-label">Hora</label>
+              <input type="time" class="form-control" formControlName="time" />
+            </div>
 
-  <button type="submit">
-    {{isEditMode() ? 'Actualizar' : 'Agregar'}}
-  </button>
-</form>
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="submit" class="btn btn-success">
+                {{ isEditMode() ? 'Actualizar' : 'Guardar' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

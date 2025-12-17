@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,6 +13,18 @@ export class Sidebar {
   isDesktop = false;
 
   isOpen = false;
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        // 🔑 SOLO cerrar en mobile
+        if (!this.isDesktop) {
+          this.showAside = false;
+        }
+      });
+  }
+
 
   ngOnInit() {
     this.checkScreen();

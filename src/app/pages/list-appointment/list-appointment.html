@@ -3,9 +3,10 @@
     <thead>
       <tr>
         <th>Espacio</th>
-        <th>Apellido del profesional</th>
-        <th>Apellido del cliente</th>
+        <th>Profesional</th>
+        <th>Cliente</th>
         <th>Fecha y hora</th>
+        <th>Hora</th>
         <th><p class="actions">Actions</p></th>
       </tr>
     </thead>
@@ -16,16 +17,19 @@
         <td data-label="Espacio">
           {{item.space}}
         </td>
-        <td data-label="Apellido del profesional">
+        <td data-label="Profesional">
           {{item.surnameSpecialist}}
         </td>
-        <td data-label="Apellido del cliente">
+        <td data-label="Cliente">
           {{item.surnameCustomer}}
         </td>
-        <td data-label="Fecha y hora">
-          {{item.date}} / {{item.time}}
+        <td data-label="Fecha">
+          {{item.date}}
         </td>
-        <td data-label="Actions">
+        <td data-label="Hora">
+          {{item.time}}
+        </td>
+        <td data-label="Acciones">
           <button class="btn btn-edit" (click)="update(item)">Modificar</button>
           <button class="btn btn-delete" (click)="delete(item.id)">Eliminar</button>
         </td>

@@ -8,6 +8,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  z-index: 1000;
 
   border-radius: 0 2rem 0 0;
   background-color: #193f2a;
@@ -33,8 +34,9 @@ button{
   position: fixed;
   right: 0;
   top: 0;
-  width: 40%;
+  width: 50%;
   height: 100%;
+  z-index: 800;
 }
 
 

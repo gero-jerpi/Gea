@@ -1,11 +1,60 @@
-<form [formGroup]="form" (ngSubmit)="render()">
-  <label>Nombre</label>
-  <input type="text" formControlName="name">
-  <label>Apellido</label>
-  <input type="text" formControlName="surname">
-  <label>Phone</label>
-  <input type="number" formControlName="phone">
-  <button type="submit">
-    {{isEditMode() ? 'Actualizar' : 'Agregar'}}
-  </button>
-</form>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Contenido principal -->
+    <div class="col ms-md-4 p-4">
+
+      <div class="card shadow-sm" style="max-width: 500px; margin:auto;">
+        <div class="card-body">
+
+          <h5 class="card-title mb-3">
+            {{ isEditMode() ? 'Editar cliente' : 'Nuevo cliente' }}
+          </h5>
+
+          <form [formGroup]="form" (ngSubmit)="render()">
+
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="name"
+                placeholder="Geronimo"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="surname"
+                placeholder="Jerpi"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Teléfono</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="phone"
+              />
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button
+                type="submit"
+                class="btn btn-success"
+              >
+                {{ isEditMode() ? 'Actualizar' : 'Guardar' }}
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

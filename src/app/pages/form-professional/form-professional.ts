@@ -21,7 +21,6 @@ export class FormProfessional {
   form = this.fb.nonNullable.group({
     name: ['', Validators.required],
     surname: ['', Validators.required],
-    dni: [0, Validators.required],
     phone: [0, Validators.required],
     rol: ['', Validators.required],
   });

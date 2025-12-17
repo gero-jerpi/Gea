@@ -37,37 +37,12 @@
       "phone": 12333
     }
   ],
-  "spaces": [
-    {
-      "id": "salon",
-      "name": "Salon de yoga",
-      "type": "Salon"
-    },
-    {
-      "id": "gab1",
-      "name": "Primer gabinete",
-      "type": "Gabinete"
-    },
-    {
-      "id": "gab2",
-      "name": "Segundo gabinete",
-      "type": "Gabinete"
-    }
-  ],
   "professionals": [
     {
       "id": "87c9",
       "name": "Geronimo",
       "surname": "Jerpi",
       "phone": 2235759592,
-      "rol": "Masajista"
-    },
-    {
-      "id": "a4b1",
-      "name": "Auto",
-      "surname": "Luca",
-      "dni": 0,
-      "phone": 4485921349012,
       "rol": "Masajista"
     }
   ]

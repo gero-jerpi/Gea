@@ -7,8 +7,6 @@ body{
 
   background-color: var(--primary-color);
   color: var(--text-color);
-
-  height: 100%;
 }
 
 html{

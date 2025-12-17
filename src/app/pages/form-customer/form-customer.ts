@@ -20,7 +20,6 @@ export class FormCustomer {
   form = this.fb.nonNullable.group({
     name: ["", Validators.required],
     surname: ["", Validators.required],
-    dni: [0, Validators.required],
     phone: [0, Validators.required],
   })
 

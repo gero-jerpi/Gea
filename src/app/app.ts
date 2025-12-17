@@ -5,6 +5,7 @@ import { ListProfessional } from './pages/list-professionals/list-professional';
 import { FormCustomer } from './pages/form-customer/form-customer';
 import { ListCustomers } from './pages/list-customers/list-customers';
 import { Sidebar } from './components/sidebar/sidebar';
+import { Dashboard } from "./pages/dashboard/dashboard";
 
 @Component({
   selector: 'app-root',
