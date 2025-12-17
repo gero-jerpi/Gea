@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { ListCustomers } from './pages/list-customers/list-customers';
-import { FormCustomer } from './pages/form-customer/form-customer';
-import { ListProfessional } from './pages/list-professionals/list-professional';
-import { FormProfessional } from './pages/form-professional/form-professional';
-import { ListAppointment } from './pages/list-appointment/list-appointment';
-import { FormAppointment } from './pages/form-appointment/form-appointment';
+import { ListCustomers } from './pages/customers/list-customers/list-customers';
+import { FormCustomer } from './pages/customers/form-customer/form-customer';
+import { ListProfessional } from './pages/professionals/list-professionals/list-professional';
+import { FormProfessional } from './pages/professionals/form-professional/form-professional';
+import { ListAppointment } from './pages/appointments/list-appointment/list-appointment';
+import { FormAppointment } from './pages/appointments/form-appointment/form-appointment';
 import { Dashboard } from './pages/dashboard/dashboard';
 
 export const routes: Routes = [

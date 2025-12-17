@@ -2,7 +2,7 @@
   "appointment": [
     {
       "id": "a4c6",
-      "space": "asd",
+      "space": "Salon",
       "surnameSpecialist": "asd",
       "surnameCustomer": "asd",
       "date": "2025-12-02",
@@ -14,25 +14,21 @@
         "date": "2025-12-18",
         "time": "02:26"
       }
+    },
+    {
+      "id": "daf2",
+      "space": "Gabinete",
+      "surnameSpecialist": "asdasd",
+      "surnameCustomer": "asdasd",
+      "date": "2026-01-01",
+      "time": "03:35"
     }
   ],
   "customers": [
     {
-      "id": "8bef",
-      "name": "asd",
-      "surname": "asd",
-      "phone": 23,
-      "newCustomer": {
-        "name": "asd",
-        "surname": "asd",
-        "dni": 0,
-        "phone": 23
-      }
-    },
-    {
       "id": "e6e1",
-      "name": "sss",
-      "surname": "sss",
+      "name": "ASDASDASDASD",
+      "surname": "ASDAsd",
       "dni": 123,
       "phone": 12333
     }
@@ -44,6 +40,13 @@
       "surname": "Jerpi",
       "phone": 2235759592,
       "rol": "Masajista"
+    },
+    {
+      "id": "30be",
+      "name": "asd",
+      "surname": "asd",
+      "phone": "23",
+      "rol": "Profesor de yoga"
     }
   ]
 }

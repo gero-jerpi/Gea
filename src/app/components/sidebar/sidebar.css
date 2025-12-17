@@ -1,36 +1,54 @@
-.sidebar{
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 60%;
-  background-color: white;
+
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   z-index: 1000;
 
+  font-weight: 600;
+
   border-radius: 0 2rem 0 0;
-  background-color: #193f2a;
+
+  background: rgba(4, 81, 71, 0.1);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 81, 71, 1) 0%,
+    rgba(4, 81, 71, 1) 50%,
+    rgba(2, 48, 44, 1) 100%
+  );
 }
 
-.sidebar nav ul{
+.sidebar h2 a{
+  color: rgb(207, 205, 205);
+}
+
+.sidebar a{
+  color: rgb(151, 150, 150);
+}
+
+.sidebar nav ul {
   padding: 0;
 }
 
-.titulo{
+.titulo {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
-button{
+button {
   padding: 1rem;
-  background:none;
+  background: none;
   border: none;
   font-size: 1.5rem;
 }
 
-.overlay{
-  background: rgba(0,0,0,.4);
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
   position: fixed;
   right: 0;
   top: 0;
@@ -39,21 +57,27 @@ button{
   z-index: 800;
 }
 
-
-@media (min-width:768px){
-  button{
+@media (min-width: 768px) {
+  button {
     display: none;
   }
-  .overlay{
+  .overlay {
     display: none;
   }
-  .sidebar{
+  .sidebar {
     width: 18%;
     border-right: 1px solid rgb(223, 220, 220);
+    gap: 0.5rem;
   }
 }
 
-
-.open .aside{
+.open .aside {
   display: none;
 }
+
+.contenedor{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+

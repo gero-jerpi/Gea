@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row">
     <!-- Contenido principal -->
-    <div class="col ms-md-4 p-4">
+    <div class="col p-4">
       <div class="card shadow-sm" style="max-width: 500px; margin: auto">
         <div class="card-body">
-          <h5 class="card-title mb-3">
+          <h5 class="card-title mb-3" style="font-weight: 600;">
             {{ isEditMode() ? 'Editar profesional' : 'Nuevo profesional' }}
           </h5>
 
@@ -24,9 +24,9 @@
               <input type="text" class="form-control" formControlName="phone"/>
             </div>
 
-            <label class="form-label">Campo</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccionar....</option>
+            <label class="form-label">Especialidad</label>
+            <select class="form-select" formControlName="rol">
+              <option value= "" disabled>Seleccionar....</option>
               <option value="Masajista">Masajista</option>
               <option value="Profesor de yoga">Profesor de yoga</option>
             </select>

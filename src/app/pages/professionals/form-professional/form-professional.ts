@@ -1,7 +1,8 @@
 import { Component, effect, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ProfessionalService } from '../../services/professional-service';
-import { Professional } from '../../models/professional.model';
+import { ProfessionalService } from '../../../services/professional-service';
+import { Professional } from '../../../models/professional.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-professional',
@@ -13,6 +14,7 @@ export class FormProfessional {
   // VARIABLES
   private fb = inject(FormBuilder);
   private service = inject(ProfessionalService);
+  private router = inject(Router)
 
   private professionalToEdit: Professional | null = null;
   isEditMode = signal(false);
@@ -58,11 +60,13 @@ export class FormProfessional {
         console.log('Profesional actualizado');
         this.service.clearProfessionalToEdit();
         this.form.reset();
+        this.router.navigate(['/list-professionals'])
       });
     } else {
       this.service.post(newProfessional).subscribe(() => {
         console.log('Profesional creado');
         this.form.reset();
+        this.router.navigate(['/list-professionals'])
       });
     }
   }

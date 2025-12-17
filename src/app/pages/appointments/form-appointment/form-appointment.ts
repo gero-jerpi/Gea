@@ -1,8 +1,9 @@
-import { newAppointment } from './../../models/appointment.model';
+import { newAppointment } from '../../../models/appointment.model';
 import { Component, effect, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { AppointmentService } from '../../services/appointment-service';
-import { Appointment } from '../../models/appointment.model';
+import { AppointmentService } from '../../../services/appointment-service';
+import { Appointment } from '../../../models/appointment.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-appointment',
@@ -13,6 +14,7 @@ import { Appointment } from '../../models/appointment.model';
 export class FormAppointment {
   private fb = inject(FormBuilder);
   private service = inject(AppointmentService);
+  private router = inject(Router)
 
   private appointmentToEdit: null | Appointment = null;
   isEditMode = signal(false);
@@ -59,11 +61,13 @@ export class FormAppointment {
       this.service.put(appointmentUpdated).subscribe(()=>{
         this.service.clearAppointmentToUpdate();
         console.log("Actualizado");
+        this.router.navigate(['/list-appointments'])
       })
     }else{
       this.service.post(newAppointment).subscribe(()=>{
         console.log("Agregado");
         this.form.reset()
+        this.router.navigate(['/list-appointments'])
       })
     }
   }
