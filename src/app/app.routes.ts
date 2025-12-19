@@ -6,16 +6,30 @@ import { FormProfessional } from './pages/professionals/form-professional/form-p
 import { ListAppointment } from './pages/appointments/list-appointment/list-appointment';
 import { FormAppointment } from './pages/appointments/form-appointment/form-appointment';
 import { Dashboard } from './pages/dashboard/dashboard';
+import { Login } from './pages/login/login';
+import { authGuard } from './services/auth-guard';
+import { Layout } from './components/layout/layout';
 
 export const routes: Routes = [
-  {path: 'list-customers', component: ListCustomers},
-  {path: 'form-customer', component: FormCustomer},
+  { path: '', component: Login },
 
-  {path: 'list-professionals', component: ListProfessional},
-  {path: 'form-professional', component: FormProfessional},
+  {
+    path: '',
+    component: Layout,
+    canActivate: [authGuard],
+    children: [
+      { path: 'list-customers', component: ListCustomers },
+      { path: 'form-customer', component: FormCustomer },
 
-  {path: 'list-appointments', component: ListAppointment},
-  {path: 'form-appointment', component: FormAppointment},
+      { path: 'list-professionals', component: ListProfessional },
+      { path: 'form-professional', component: FormProfessional },
 
-  {path: 'dashboard', component: Dashboard}
+      { path: 'list-appointments', component: ListAppointment },
+      { path: 'form-appointment', component: FormAppointment },
+
+      { path: 'dashboard', component: Dashboard },
+    ],
+  },
+
+  { path: '**', redirectTo: 'login' },
 ];

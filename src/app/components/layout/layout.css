@@ -1,0 +1,11 @@
+.main-content{
+  margin: 0 1rem;
+}
+
+@media (min-width:768px){
+.main-content{
+  margin-left: 21%;
+  margin-right: 3%;
+}
+}
+

@@ -6,20 +6,13 @@
       "surnameSpecialist": "asd",
       "surnameCustomer": "asd",
       "date": "2025-12-02",
-      "time": "02:26",
-      "newAppointment": {
-        "space": "asdasdasd",
-        "surnameSpecialist": "asdasd",
-        "surnameCustomer": "asdasdasd",
-        "date": "2025-12-18",
-        "time": "02:26"
-      }
+      "time": "02:26"
     },
     {
       "id": "daf2",
       "space": "Gabinete",
       "surnameSpecialist": "asdasd",
-      "surnameCustomer": "asdasd",
+      "surnameCustomer": "asdasdasdasd",
       "date": "2026-01-01",
       "time": "03:35"
     }
@@ -47,6 +40,12 @@
       "surname": "asd",
       "phone": "23",
       "rol": "Profesor de yoga"
+    }
+  ],
+  "users": [
+    {
+      "name": "admin",
+      "password": "admin"
     }
   ]
 }

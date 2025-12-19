@@ -1,0 +1,30 @@
+<div class="login-container">
+  <form class="login-card" [formGroup]="form" (ngSubmit)="auth()">
+
+    <h2>Iniciar sesión</h2>
+    <p class="subtitle">Acceso administrador</p>
+
+    <div class="form-group">
+      <label>Usuario</label>
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Usuario"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="********"
+      />
+    </div>
+
+    <button type="submit">
+      Entrar
+    </button>
+
+  </form>
+</div>

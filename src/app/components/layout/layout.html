@@ -1,0 +1,10 @@
+@if(!isLoggedIn()){
+<main class="login">
+  <router-outlet />
+</main>
+}@else{
+<app-sidebar></app-sidebar>
+<main class="main-content">
+  <router-outlet />
+</main>
+}
