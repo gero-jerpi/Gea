@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { newProfessional, Professional } from '../models/professional.model';
 import { Observable, tap } from 'rxjs';
 
@@ -16,6 +16,8 @@ export class ProfessionalService {
 
   private professionalToEditSignal = signal<Professional | null>(null)
   public professionalToEdit = this.professionalToEditSignal.asReadonly()
+
+  size = computed(() => this.professionals().length);
 
   addProfessionalToEdit(professional: Professional){
     this.professionalToEditSignal.set(professional);

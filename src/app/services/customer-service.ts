@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Customer, newCustomer } from './../models/customer.model';
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 
 @Injectable({
@@ -15,6 +15,8 @@ export class CustomerService {
   private customerToEditSignal = signal<Customer | null>(null)
   public customerToEdit = this.customerToEditSignal.asReadonly()
 
+  size = computed(() => this.customers().length);
+
   clearCustomerToEdit(){
     this.customerToEditSignal.set(null);
   }
@@ -26,6 +28,8 @@ export class CustomerService {
   constructor(private http: HttpClient) {
     this.get();
   }
+
+
 
   get() {
     this.http.get<Customer[]>(this.apiUrl).subscribe((data) => {
